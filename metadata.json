@@ -1,0 +1,5 @@
+{
+  "name": "Farmer Support",
+  "description": "An AI-powered portal helping farmers discover government schemes and check eligibility based on their specific needs and profile.",
+  "requestFramePermissions": ["geolocation"]
+}
