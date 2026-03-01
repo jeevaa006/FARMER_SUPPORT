@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  
+  --color-earth-50: #fdfcfb;
+  --color-earth-100: #f7f3f0;
+  --color-earth-200: #eee5de;
+  --color-earth-300: #e0d1c7;
+  --color-earth-400: #cbb4a5;
+  --color-earth-500: #b59582;
+  --color-earth-600: #a37e6a;
+  --color-earth-700: #886858;
+  --color-earth-800: #71574a;
+  --color-earth-900: #5d493f;
+  --color-earth-950: #312621;
+
+  --color-leaf-50: #f2f9f1;
+  --color-leaf-100: #e2f2e0;
+  --color-leaf-200: #c7e5c3;
+  --color-leaf-300: #9ecc98;
+  --color-leaf-400: #6eac66;
+  --color-leaf-500: #4b8e44;
+  --color-leaf-600: #3a7434;
+  --color-leaf-700: #2f5c2a;
+  --color-leaf-800: #284a25;
+  --color-leaf-900: #223e20;
+  --color-leaf-950: #0f210e;
+}
+
+@layer base {
+  body {
+    @apply bg-earth-100 text-earth-950 font-sans;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+.glass-card {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-sm rounded-3xl;
+}
+
+.btn-primary {
+  @apply bg-leaf-600 hover:bg-leaf-700 text-white px-6 py-3 rounded-full font-medium transition-all active:scale-95 shadow-lg shadow-leaf-900/10;
+}
+
+.input-field {
+  @apply w-full bg-white border border-earth-200 rounded-2xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-leaf-500/20 focus:border-leaf-500 transition-all;
+}
+
+.markdown-body ul {
+  @apply list-disc ml-5 space-y-1 my-2;
+}
+.markdown-body ol {
+  @apply list-decimal ml-5 space-y-1 my-2;
+}
+.markdown-body p {
+  @apply mb-3 last:mb-0;
+}
+.markdown-body strong {
+  @apply font-bold text-emerald-900;
+}
